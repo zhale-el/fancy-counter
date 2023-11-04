@@ -27,6 +27,10 @@ body {
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+  transition: all 0.4s;
+}
+.counter--limit {
+  background-color: #3366a0;
 }
 .counter__title {
   opacity: 0.6;
