@@ -5,7 +5,7 @@ const decreaseButtonEl = document.querySelector(".counter__button-decrease");
 const resetButtonEl = document.querySelector(".counter__rest-button");
 const counterTitle = document.querySelector(".counter__title");
 
-function decrementCounter() {
+const decrementCounter = () => {
   // get current value of counter
   const counterValue = counterValueEl.textContent;
 
@@ -25,9 +25,9 @@ function decrementCounter() {
 
   //unfocus (blur) button
   decreaseButtonEl.blur();
-}
+};
 
-function incrementCounter() {
+const incrementCounter = () => {
   //current value of counter
   const counterVal = counterValueEl.textContent;
 
@@ -54,13 +54,13 @@ function incrementCounter() {
 
   //unfocus (blur) button
   increaseButtonEl.blur();
-}
+};
 
 decreaseButtonEl.addEventListener("click", decrementCounter);
 
 increaseButtonEl.addEventListener("click", incrementCounter);
 
-resetButtonEl.addEventListener("click", function () {
+resetButtonEl.addEventListener("click", () => {
   counterValueEl.textContent = 0;
 
   //reset backgroundColor
