@@ -22,6 +22,9 @@ function decrementCounter() {
 
   //update counter value with new value
   counterValueEl.textContent = newNumber;
+
+  //unfocus (blur) button
+  decreaseButtonEl.blur();
 }
 
 function incrementCounter() {
@@ -48,6 +51,9 @@ function incrementCounter() {
   }
   //get counter element with new value
   counterValueEl.textContent = newValue;
+
+  //unfocus (blur) button
+  increaseButtonEl.blur();
 }
 
 decreaseButtonEl.addEventListener("click", decrementCounter);
@@ -66,6 +72,9 @@ resetButtonEl.addEventListener("click", function () {
   //enable increase and decrease button
   increaseButtonEl.disabled = false;
   decreaseButtonEl.disabled = false;
+
+  //unfocus (blur) reset button
+  resetButtonEl.blur();
 });
 
 // ----- key down ----
